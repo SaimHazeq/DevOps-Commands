@@ -1,4 +1,4 @@
-<img width="64" height="64" alt="argo" src="https://github.com/user-attachments/assets/178c3b89-cba0-4be1-aa89-4dd17b51e48e" /><img width="204" height="192" alt="image" src="https://github.com/user-attachments/assets/5f89c6c5-39ac-4936-b298-9ac44f71010a" /># DevOps - 500 Commands to Master DevOps
+# DevOps - 500 Commands to Master DevOps
 
 A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terraform, Jenkins, Ansible, AWS CLI, Helm, Prometheus, Grafana, ArgoCD, GitHub Actions, GitLab CI/CD, CircleCI, Trivy, Vault, Loki, ELK, Fluentd, and essential troubleshooting commands.
 
