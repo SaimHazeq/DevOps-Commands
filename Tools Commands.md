@@ -129,6 +129,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 ```  
 
 ## Docker Commands
+```bash
 101. `docker --version` – Check Docker version  
 102. `docker ps` – List running containers  
 103. `docker ps -a` – List all containers  
@@ -178,9 +179,11 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 147. `docker-compose exec service_name bash` – Run command inside a service container  
 148. `docker-compose scale service=3` – Scale a service to 3 instances  
 149. `docker-compose stop` – Stop all services without removing containers  
-150. `docker-compose config` – Validate Docker Compose config  
+150. `docker-compose config` – Validate Docker Compose config
+```  
 
 ## Kubernetes (kubectl)
+```bash
 151. `kubectl get nodes` – List nodes in the cluster  
 152. `kubectl get pods` – List pods  
 153. `kubectl describe pod pod_name` – Show pod details  
@@ -230,9 +233,11 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 197. `kubectl get clusterrolebindings` – List cluster role bindings  
 198. `kubectl get networkpolicy` – List network policies  
 199. `kubectl delete node node_name` – Delete a node  
-200. `kubectl run nginx --image=nginx --restart=Never` – Run a single pod  
+200. `kubectl run nginx --image=nginx --restart=Never` – Run a single pod
+```  
 
 ## Terraform Commands
+```bash
 201. `terraform --version` – Check Terraform version  
 202. `terraform init` – Initialize Terraform working directory  
 203. `terraform plan` – Show execution plan  
@@ -282,9 +287,11 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 247. `terraform version -json` – Output Terraform version in JSON  
 248. `terraform workspace show` – Show current workspace  
 249. `terraform plan -var-file=config.tfvars` – Use a variable file  
-250. `terraform output -state=terraform.tfstate` – Show output from a specific state file  
+250. `terraform output -state=terraform.tfstate` – Show output from a specific state file
+```  
 
 ## Jenkins CLI Commands
+```bash
 251. `java -jar jenkins-cli.jar -s http://localhost:8080/ help` – Show CLI help  
 252. `java -jar jenkins-cli.jar -s http://localhost:8080/ list-jobs` – List all jobs  
 253. `java -jar jenkins-cli.jar -s http://localhost:8080/ build job_name` – Trigger a job  
@@ -310,8 +317,10 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 273. `java -jar jenkins-cli.jar -s http://localhost:8080/ install-plugin plugin.hpi` – Install plugin from file  
 274. `java -jar jenkins-cli.jar -s http://localhost:8080/ get-view view_name` – Get view configuration  
 275. `java -jar jenkins-cli.jar -s http://localhost:8080/ create-view view_name < config.xml` – Create a new view  
+```
 
 ## Ansible Commands
+```bash
 276. `ansible --version` – Check Ansible version  
 277. `ansible all -m ping` – Ping all hosts in the inventory  
 278. `ansible-playbook playbook.yml` – Run a playbook  
@@ -337,8 +346,10 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 298. `ansible-playbook -i inventory playbook.yml --start-at-task="task_name"` – Start playbook from a specific task  
 299. `ansible -i inventory -m ping all` – Ping all hosts  
 300. `ansible-galaxy init myrole` – Create a new Ansible role  
+```
 
 ## AWS CLI Commands
+```bash
 301. `aws configure` – Configure AWS CLI credentials  
 302. `aws s3 ls` – List S3 buckets  
 303. `aws s3 cp file.txt s3://mybucket/` – Copy file to S3  
@@ -389,8 +400,10 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 348. `aws s3 mb s3://my-new-bucket` – Create a new S3 bucket  
 349. `aws s3 rb s3://my-new-bucket --force` – Delete an S3 bucket  
 350. `aws cloudfront list-distributions` – List CloudFront distributions  
+```
 
 ## Helm Commands
+```bash
 351. `helm version` – Check Helm version  
 352. `helm repo add stable https://charts.helm.sh/stable` – Add Helm repository  
 353. `helm repo update` – Update Helm repositories  
@@ -416,154 +429,179 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 373. `helm env` – Show Helm environment variables  
 374. `helm show values stable/nginx` – Show default values of a chart  
 375. `helm upgrade --install myapp stable/nginx` – Install or upgrade release  
+```
 
 ## Prometheus Commands
-376. `prometheus --version` – Check Prometheus version  
-377. `promtool check config prometheus.yml` – Validate Prometheus configuration  
-378. `prometheus --config.file=prometheus.yml` – Start Prometheus  
-379. `prometheus --storage.tsdb.path=data/` – Define storage path  
-380. `prometheus --web.listen-address=:9090` – Start Prometheus on a specific port  
-381. `curl http://localhost:9090/api/v1/targets` – Check active Prometheus targets  
-382. `curl http://localhost:9090/api/v1/status/config` – Fetch Prometheus config  
-383. `curl http://localhost:9090/api/v1/query?query=up` – Run an instant query  
-384. `prometheus --query.lookback-delta=5m` – Adjust query range  
-385. `prometheus --storage.tsdb.retention.time=15d` – Set data retention  
-386. `prometheus --web.enable-lifecycle` – Enable reload API  
-387. `curl -X POST http://localhost:9090/-/reload` – Reload configuration  
-388. `systemctl restart prometheus` – Restart Prometheus service  
-389. `journalctl -u prometheus --no-pager` – Check Prometheus logs  
-390. `promtool check rules rules.yml` – Validate recording rules  
-391. `prometheus --storage.tsdb.max-block-duration=2h` – Adjust block duration  
-392. `prometheus --storage.tsdb.no-lockfile` – Disable lockfile  
-393. `prometheus --enable-feature=remote-write-receiver` – Enable remote write  
-394. `prometheus --web.enable-admin-api` – Enable admin API  
-395. `promtool query instant http://localhost:9090 "up"` – Query using promtool  
-396. `promtool tsdb analyze data/` – Analyze TSDB database  
-397. `curl http://localhost:9090/api/v1/rules` – Show alerting rules  
-398. `prometheus --log.level=debug` – Start Prometheus with debug logs  
-399. `promtool check-metrics metrics.prom` – Validate metrics file  
-400. `prometheus --config.file=prometheus.yml --web.console.templates=console/` – Load custom web templates  
+```bash
+376. `prometheus --version`                       – Check Prometheus version  
+377. `promtool check config prometheus.yml`       – Validate Prometheus configuration  
+378. `prometheus --config.file=prometheus.yml`    – Start Prometheus  
+379. `prometheus --storage.tsdb.path=data/`       – Define storage path  
+380. `prometheus --web.listen-address=:9090`      – Start Prometheus on a specific port  
+381. `curl http://localhost:9090/api/v1/targets`  – Check active Prometheus targets  
+382. `curl http://localhost:9090/api/v1/status/config`        – Fetch Prometheus config  
+383. `curl http://localhost:9090/api/v1/query?query=up`       – Run an instant query  
+384. `prometheus --query.lookback-delta=5m`       – Adjust query range  
+385. `prometheus --storage.tsdb.retention.time=15d`           – Set data retention  
+386. `prometheus --web.enable-lifecycle`          – Enable reload API  
+387. `curl -X POST http://localhost:9090/-/reload`            – Reload configuration  
+388. `systemctl restart prometheus`               – Restart Prometheus service  
+389. `journalctl -u prometheus --no-pager`        – Check Prometheus logs  
+390. `promtool check rules rules.yml`             – Validate recording rules  
+391. `prometheus --storage.tsdb.max-block-duration=2h`        – Adjust block duration  
+392. `prometheus --storage.tsdb.no-lockfile`      – Disable lockfile  
+393. `prometheus --enable-feature=remote-write-receiver`      – Enable remote write  
+394. `prometheus --web.enable-admin-api`          – Enable admin API  
+395. `promtool query instant http://localhost:9090 "up"`      – Query using promtool  
+396. `promtool tsdb analyze data/`                – Analyze TSDB database  
+397. `curl http://localhost:9090/api/v1/rules`    – Show alerting rules  
+398. `prometheus --log.level=debug`               – Start Prometheus with debug logs  
+399. `promtool check-metrics metrics.prom`        – Validate metrics file  
+400. `prometheus --config.file=prometheus.yml --web.console.templates=console/`       – Load custom web templates  
+```
 
 ## Grafana Commands
-401. `grafana-server --version` – Check Grafana version  
-402. `systemctl start grafana-server` – Start Grafana service  
-403. `systemctl stop grafana-server` – Stop Grafana service  
-404. `systemctl restart grafana-server` – Restart Grafana service  
-405. `systemctl status grafana-server` – Check Grafana status  
-406. `grafana-cli plugins list` – List installed plugins  
-407. `grafana-cli plugins install grafana-clock-panel` – Install a Grafana plugin  
-408. `grafana-cli plugins update-all` – Update all plugins  
-409. `grafana-cli admin reset-admin-password newpassword` – Reset admin password  
-410. `curl http://localhost:3000/api/health` – Check Grafana health  
-411. `curl -u admin:admin http://localhost:3000/api/dashboards/home` – Get home dashboard  
-412. `grafana-cli plugins remove plugin-name` – Remove a plugin  
-413. `grafana-cli admin reset-admin-password newpass` – Reset admin password  
-414. `grafana-server -config /etc/grafana/grafana.ini` – Start with custom config  
-415. `curl -X GET http://localhost:3000/api/dashboards` – List dashboards  
-416. `curl -X POST http://localhost:3000/api/dashboards/db -d '@dashboard.json'` – Create dashboard  
-417. `journalctl -u grafana-server --no-pager` – Check logs  
-418. `grafana-cli plugins install grafana-simple-json-datasource` – Install JSON data source  
-419. `grafana-cli plugins update` – Update Grafana plugins  
-420. `systemctl enable grafana-server` – Enable Grafana on startup  
-421. `grafana-cli plugins update-all` – Update all plugins  
-422. `grafana-cli server restart` – Restart Grafana  
-423. `grafana-cli admin reset-admin-password mynewpassword` – Reset password  
-424. `curl http://localhost:3000/api/org` – Get organization details  
-425. `grafana-server --homepath /var/lib/grafana` – Run Grafana with a specific path  
+```bash
+401. `grafana-server --version`             – Check Grafana version  
+402. `systemctl start grafana-server`       – Start Grafana service  
+403. `systemctl stop grafana-server`        – Stop Grafana service  
+404. `systemctl restart grafana-server`     – Restart Grafana service  
+405. `systemctl status grafana-server`      – Check Grafana status  
+406. `grafana-cli plugins list`             – List installed plugins  
+407. `grafana-cli plugins install grafana-clock-panel`         – Install a Grafana plugin  
+408. `grafana-cli plugins update-all`       – Update all plugins  
+409. `grafana-cli admin reset-admin-password newpassword`      – Reset admin password  
+410. `curl http://localhost:3000/api/health`                   – Check Grafana health  
+411. `curl -u admin:admin http://localhost:3000/api/dashboards/home`     – Get home dashboard  
+412. `grafana-cli plugins remove plugin-name`                  – Remove a plugin  
+413. `grafana-cli admin reset-admin-password newpass`          – Reset admin password  
+414. `grafana-server -config /etc/grafana/grafana.ini`         – Start with custom config  
+415. `curl -X GET http://localhost:3000/api/dashboards`        – List dashboards  
+416. `curl -X POST http://localhost:3000/api/dashboards/db -d '@dashboard.json'`       – Create dashboard  
+417. `journalctl -u grafana-server --no-pager`                 – Check logs  
+418. `grafana-cli plugins install grafana-simple-json-datasource`                      – Install JSON data source  
+419. `grafana-cli plugins update`            – Update Grafana plugins  
+420. `systemctl enable grafana-server`       – Enable Grafana on startup  
+421. `grafana-cli plugins update-all`        – Update all plugins  
+422. `grafana-cli server restart`            – Restart Grafana  
+423. `grafana-cli admin reset-admin-password mynewpassword`   – Reset password  
+424. `curl http://localhost:3000/api/org`                     – Get organization details  
+425. `grafana-server --homepath /var/lib/grafana`             – Run Grafana with a specific path  
+```
 
 ## ArgoCD Commands
-426. `argocd version` – Show ArgoCD CLI version  
-427. `argocd login my-argocd.com` – Login to ArgoCD  
-428. `argocd app list` – List all ArgoCD applications  
-429. `argocd app get my-app` – Show details of an app  
-430. `argocd app sync my-app` – Sync an application  
-431. `argocd app delete my-app` – Delete an application  
-432. `argocd app rollback my-app 1` – Rollback an application  
-433. `argocd app history my-app` – Show deployment history  
-434. `argocd app create my-app --repo https://github.com/user/repo.git --path app` – Create an application  
-435. `argocd app update my-app --sync-policy automated` – Enable auto-sync  
-436. `argocd app set my-app --dest-server https://k8s-cluster` – Set destination server  
-437. `argocd app unset my-app --dest-server` – Unset destination server  
-438. `argocd repo list` – List connected repositories  
-439. `argocd repo add https://github.com/user/repo.git` – Add a repository  
-440. `argocd cluster list` – List managed clusters  
-441. `argocd cluster add my-cluster` – Add a new cluster  
-442. `argocd login my-argocd.com --username admin --password pass` – Login with credentials  
-443. `argocd app diff my-app` – Show differences in application  
-444. `argocd proj list` – List ArgoCD projects  
-445. `argocd proj create my-project` – Create a project  
-446. `argocd proj delete my-project` – Delete a project  
-447. `argocd settings list` – Show ArgoCD settings  
-448. `argocd account list` – List user accounts  
-449. `argocd logout` – Logout from ArgoCD  
-450. `argocd help` – Show help for ArgoCD CLI  
+```bash
+426. `argocd version`                     – Show ArgoCD CLI version  
+427. `argocd login my-argocd.com`         – Login to ArgoCD  
+428. `argocd app list`                    – List all ArgoCD applications  
+429. `argocd app get my-app`              – Show details of an app  
+430. `argocd app sync my-app`             – Sync an application  
+431. `argocd app delete my-app`           – Delete an application  
+432. `argocd app rollback my-app 1`       – Rollback an application  
+433. `argocd app history my-app`          – Show deployment history  
+434. `argocd app create my-app --repo https://github.com/user/repo.git --path app`         – Create an application  
+435. `argocd app update my-app --sync-policy automated`                                    – Enable auto-sync  
+436. `argocd app set my-app --dest-server https://k8s-cluster`                             – Set destination server  
+437. `argocd app unset my-app --dest-server`         – Unset destination server  
+438. `argocd repo list`                              – List connected repositories  
+439. `argocd repo add https://github.com/user/repo.git`       – Add a repository  
+440. `argocd cluster list`               – List managed clusters  
+441. `argocd cluster add my-cluster`     – Add a new cluster  
+442. `argocd login my-argocd.com --username admin --password pass`                         – Login with credentials  
+443. `argocd app diff my-app`            – Show differences in application  
+444. `argocd proj list`                  – List ArgoCD projects  
+445. `argocd proj create my-project`     – Create a project  
+446. `argocd proj delete my-project`     – Delete a project  
+447. `argocd settings list`              – Show ArgoCD settings  
+448. `argocd account list`               – List user accounts  
+449. `argocd logout`                     – Logout from ArgoCD  
+450. `argocd help`                       – Show help for ArgoCD CLI  
+```
 
 ## GitHub Actions
-451. `gh workflow list` – List all GitHub Actions workflows  
-452. `gh workflow run my-workflow.yml` – Run a specific workflow  
-453. `gh run list` – List all workflow runs  
-454. `gh run view <run_id>` – View details of a workflow run  
-455. `gh run cancel <run_id>` – Cancel a running workflow  
-456. `gh run rerun <run_id>` – Rerun a failed workflow  
-457. `gh secret list` – List GitHub repository secrets  
-458. `gh secret set MY_SECRET --body "value"` – Set a secret in GitHub Actions  
-459. `gh variable list` – List environment variables in GitHub Actions  
-460. `gh variable set MY_VAR --body "value"` – Set an environment variable  
+```bash
+451. `gh workflow list`                   – List all GitHub Actions workflows  
+452. `gh workflow run my-workflow.yml`    – Run a specific workflow  
+453. `gh run list`                        – List all workflow runs  
+454. `gh run view <run_id>`               – View details of a workflow run  
+455. `gh run cancel <run_id>`             – Cancel a running workflow  
+456. `gh run rerun <run_id>`              – Rerun a failed workflow  
+457. `gh secret list`                     – List GitHub repository secrets  
+458. `gh secret set MY_SECRET --body "value"`     – Set a secret in GitHub Actions  
+459. `gh variable list`                   – List environment variables in GitHub Actions  
+460. `gh variable set MY_VAR --body "value"`      – Set an environment variable  
+```
 
 ## GitLab CI/CD
-461. `gitlab-runner register` – Register a new GitLab runner  
-462. `gitlab-runner start` – Start GitLab Runner  
-463. `gitlab-runner stop` – Stop GitLab Runner  
-464. `gitlab-runner verify` – Verify if runners are properly registered  
-465. `gitlab-runner list` – List all registered runners  
-466. `gitlab-runner status` – Show GitLab Runner status  
-467. `gitlab-runner logs` – View logs for GitLab Runner  
+```bash
+461. `gitlab-runner register`     – Register a new GitLab runner  
+462. `gitlab-runner start`        – Start GitLab Runner  
+463. `gitlab-runner stop`         – Stop GitLab Runner  
+464. `gitlab-runner verify`       – Verify if runners are properly registered  
+465. `gitlab-runner list`         – List all registered runners  
+466. `gitlab-runner status`       – Show GitLab Runner status  
+467. `gitlab-runner logs`         – View logs for GitLab Runner  
+```
 
 ## CircleCI
-468. `circleci config validate` – Validate CircleCI configuration  
-469. `circleci local execute -c .circleci/config.yml` – Run pipeline locally  
-470. `circleci project list` – List all projects in CircleCI  
-471. `circleci setup` – Configure CircleCI for the first time  
-472. `circleci build` – Run a build locally  
-473. `circleci config process .circleci/config.yml` – Process CircleCI config  
-474. `circleci rerun <build_number>` – Rerun a specific build  
-475. `circleci admin namespace list` – List CircleCI namespaces  
+```bash
+468. `circleci config validate`                               – Validate CircleCI configuration  
+469. `circleci local execute -c .circleci/config.yml`         – Run pipeline locally  
+470. `circleci project list`                                  – List all projects in CircleCI  
+471. `circleci setup`                                         – Configure CircleCI for the first time  
+472. `circleci build`                                         – Run a build locally  
+473. `circleci config process .circleci/config.yml`           – Process CircleCI config  
+474. `circleci rerun <build_number>`                          – Rerun a specific build  
+475. `circleci admin namespace list`                          – List CircleCI namespaces  
+```
 
 ## Security & Compliance
 ### Trivy (Container Security Scanning)
-476. `trivy image nginx:latest` – Scan a container image  
-477. `trivy filesystem /path/to/dir` – Scan a directory  
-478. `trivy repo https://github.com/user/repo` – Scan a Git repository  
-479. `trivy k8s cluster` – Scan a Kubernetes cluster  
-480. `trivy config .` – Scan IaC configurations  
+```bash
+476. `trivy image nginx:latest`                   – Scan a container image  
+477. `trivy filesystem /path/to/dir`              – Scan a directory  
+478. `trivy repo https://github.com/user/repo`    – Scan a Git repository  
+479. `trivy k8s cluster`                          – Scan a Kubernetes cluster  
+480. `trivy config .`                             – Scan IaC configurations  
+```
 
 ### Vault (Secrets Management)
-481. `vault server -dev` – Start Vault in development mode  
-482. `vault kv put secret/mysecret key=value` – Store a secret  
-483. `vault kv get secret/mysecret` – Retrieve a secret  
-484. `vault kv delete secret/mysecret` – Delete a secret  
-485. `vault login <token>` – Authenticate with Vault  
+```bash
+481. `vault server -dev`                           – Start Vault in development mode  
+482. `vault kv put secret/mysecret key=value`      – Store a secret  
+483. `vault kv get secret/mysecret`                – Retrieve a secret  
+484. `vault kv delete secret/mysecret`             – Delete a secret  
+485. `vault login <token>`                         – Authenticate with Vault  
+```
 
 ## Monitoring & Logging
 ### Loki (Log Aggregation)
-486. `loki -config.file=loki-config.yml` – Start Loki with config file  
-487. `curl -X GET http://localhost:3100/loki/api/v1/labels` – Get available labels  
-488. `curl -X GET 'http://localhost:3100/loki/api/v1/query?query={app="nginx"}'` – Query logs  
+```bash
+486. `loki -config.file=loki-config.yml`      – Start Loki with config file  
+487. `curl -X GET http://localhost:3100/loki/api/v1/labels`      – Get available labels  
+488. `curl -X GET 'http://localhost:3100/loki/api/v1/query?query={app="nginx"}'`      – Query logs  
+```
 
 ### ELK Stack (Elasticsearch, Logstash, Kibana)
-489. `curl -X GET "localhost:9200/_cat/indices?v"` – List Elasticsearch indices  
-490. `curl -X POST "localhost:9200/logs/_doc/" -H "Content-Type: application/json" -d '{"message": "hello world"}'` – Insert a log entry  
-491. `curl -X GET "localhost:9200/logs/_search"` – Search logs  
-492. `systemctl start logstash` – Start Logstash  
-493. `systemctl restart kibana` – Restart Kibana  
+```bash
+489. `curl -X GET "localhost:9200/_cat/indices?v"`     – List Elasticsearch indices  
+490. `curl -X POST "localhost:9200/logs/_doc/" -H "Content-Type: application/json" -d '{"message": "hello world"}'`     – Insert a log entry  
+491. `curl -X GET "localhost:9200/logs/_search"`       – Search logs  
+492. `systemctl start logstash`                        – Start Logstash  
+493. `systemctl restart kibana`                        – Restart Kibana  
+```
 
 ### Fluentd (Log Forwarding)
-494. `fluentd --config fluentd.conf` – Start Fluentd with a specific config  
-495. `fluentd --dry-run --config fluentd.conf` – Validate Fluentd config  
+```bash
+494. `fluentd --config fluentd.conf`             – Start Fluentd with a specific config  
+495. `fluentd --dry-run --config fluentd.conf`   – Validate Fluentd config  
+```
 
 ## Final Set of Essential Commands
-496. `htop` – Interactive process monitoring  
-497. `iftop` – Monitor network bandwidth usage  
-498. `iotop` – Monitor disk I/O usage  
-499. `nc -zv host 80` – Check if a port is open  
-500. `curl -I http://example.com` – Fetch HTTP headers  
+```bash
+496. `htop`       – Interactive process monitoring  
+497. `iftop`      – Monitor network bandwidth usage  
+498. `iotop`      – Monitor disk I/O usage  
+499. `nc -zv host 80`                 – Check if a port is open  
+500. `curl -I http://example.com`     – Fetch HTTP headers
+```  
