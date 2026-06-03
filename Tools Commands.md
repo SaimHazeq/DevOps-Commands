@@ -23,6 +23,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 - [Final Set](#final-set-of-essential-commands)
 
 ## Linux Commands
+```
 1. `uname -a` – Show system information  
 2. `uptime` – Show system uptime  
 3. `hostname` – Show hostname  
@@ -70,7 +71,8 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 45. `ssh user@host` – SSH into a server  
 46. `exit` – Logout from shell  
 47. `free -m` – Show memory usage  
-48. `vmstat` – Show CPU/memory stats  
+48. `vmstat` – Show CPU/memory stats
+```  
 
 ## Git Commands
 51. `git init` – Initialize a git repository  
