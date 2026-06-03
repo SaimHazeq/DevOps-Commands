@@ -23,7 +23,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 - [Final Set](#final-set-of-essential-commands)
 
 ## Linux Commands
-```
+```bash
 1. `uname -a` – Show system information  
 2. `uptime` – Show system uptime  
 3. `hostname` – Show hostname  
