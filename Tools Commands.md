@@ -507,7 +507,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 439. `argocd repo add https://github.com/user/repo.git`       – Add a repository  
 440. `argocd cluster list`               – List managed clusters  
 441. `argocd cluster add my-cluster`     – Add a new cluster  
-442. `argocd login my-argocd.com --username admin --password pass`                         – Login with credentials  
+442. `argocd login my-argocd.com --username admin --password pass`           – Login with credentials  
 443. `argocd app diff my-app`            – Show differences in application  
 444. `argocd proj list`                  – List ArgoCD projects  
 445. `argocd proj create my-project`     – Create a project  
@@ -528,7 +528,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 456. `gh run rerun <run_id>`              – Rerun a failed workflow  
 457. `gh secret list`                     – List GitHub repository secrets  
 458. `gh secret set MY_SECRET --body "value"`     – Set a secret in GitHub Actions  
-459. `gh variable list`                   – List environment variables in GitHub Actions  
+459. `gh variable list`                           – List environment variables in GitHub Actions  
 460. `gh variable set MY_VAR --body "value"`      – Set an environment variable  
 ```
 
