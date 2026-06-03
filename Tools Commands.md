@@ -46,29 +46,29 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 20. `who`                   – Show logged-in users  
 21. `adduser username`      – Create a new user  
 22. `passwd username`       – Change user password  
-23. `usermod -aG group user` – Add user to a group  
-24. `grep "text" file.txt`   – Search for a string in a file  
-25. `find /path -name "*.log"` – Find files matching pattern  
-26. `chmod 755 file.sh`        – Change file permissions  
-27. `chown user:group file`    – Change file owner  
-28. `tar -czf archive.tar.gz directory/` – Compress files  
-29. `tar -xzf archive.tar.gz`            – Extract compressed file  
+23. `usermod -aG group user`     – Add user to a group  
+24. `grep "text" file.txt`       – Search for a string in a file  
+25. `find /path -name "*.log"`   – Find files matching pattern  
+26. `chmod 755 file.sh`          – Change file permissions  
+27. `chown user:group file`      – Change file owner  
+28. `tar -czf archive.tar.gz directory/`   – Compress files  
+29. `tar -xzf archive.tar.gz`  – Extract compressed file  
 30. `cat file.txt`             – View file contents  
 31. `tail -f /var/log/syslog`  – View real-time log updates  
 32. `echo "text" >> file.txt`  – Append text to file  
-33. `history`                  – Show command history  
-34. `clear`                    – Clear terminal screen  
-35. `alias ll='ls -lah'`       – Create an alias  
-36. `df -Th`                   – Show file system disk space  
-37. `wc -l file.txt`           – Count number of lines in a file  
-38. `cut -d':' -f1 /etc/passwd` – Extract first column from file  
-39. `awk '{print $1}' file.txt` – Print first column of text  
-40. `sed -i 's/old/new/g' file.txt` – Replace text in a file  
-41. `crontab -e`               – Edit cron jobs  
-42. `cron -l`                   – List scheduled cron jobs  
-43. `rsync -av source/ target/` – Sync files  
-44. `scp user@host:/path/to/file .` – Secure copy file  
-45. `ssh user@host`             – SSH into a server  
+33. `history`               – Show command history  
+34. `clear`                 – Clear terminal screen  
+35. `alias ll='ls -lah'`    – Create an alias  
+36. `df -Th`                – Show file system disk space  
+37. `wc -l file.txt`        – Count number of lines in a file  
+38. `cut -d':' -f1 /etc/passwd`       – Extract first column from file  
+39. `awk '{print $1}' file.txt`       – Print first column of text  
+40. `sed -i 's/old/new/g' file.txt`   – Replace text in a file  
+41. `crontab -e`       – Edit cron jobs  
+42. `cron -l`          – List scheduled cron jobs  
+43. `rsync -av source/ target/`         – Sync files  
+44. `scp user@host:/path/to/file .`     – Secure copy file  
+45. `ssh user@host`    – SSH into a server  
 46. `exit`             – Logout from shell  
 47. `free -m`          – Show memory usage  
 48. `vmstat`           – Show CPU/memory stats
