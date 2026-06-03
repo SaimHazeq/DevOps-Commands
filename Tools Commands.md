@@ -74,7 +74,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 48. `vmstat`           – Show CPU/memory stats
 ```  
 
-## Git Commands
+## 🌱 Git Commands
 ```bash
 51. `git init`                 – Initialize a git repository  
 52. `git clone repo_url`       – Clone a repository  
@@ -128,7 +128,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 100. `git worktree add ../branch_name branch_name`         – Work with multiple branches
 ```  
 
-## Docker Commands
+## 🐳 Docker Commands
 ```bash
 101. `docker --version` – Check Docker version  
 102. `docker ps` – List running containers  
@@ -182,7 +182,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 150. `docker-compose config` – Validate Docker Compose config
 ```  
 
-## Kubernetes (kubectl)
+## ☸️ Kubernetes (kubectl)
 ```bash
 151. `kubectl get nodes` – List nodes in the cluster  
 152. `kubectl get pods` – List pods  
@@ -236,7 +236,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 200. `kubectl run nginx --image=nginx --restart=Never` – Run a single pod
 ```  
 
-## Terraform Commands
+## 🌍 Terraform Commands
 ```bash
 201. `terraform --version` – Check Terraform version  
 202. `terraform init` – Initialize Terraform working directory  
@@ -290,7 +290,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 250. `terraform output -state=terraform.tfstate` – Show output from a specific state file
 ```  
 
-## Jenkins CLI Commands
+## ⚙️ Jenkins CLI Commands
 ```bash
 251. `java -jar jenkins-cli.jar -s http://localhost:8080/ help` – Show CLI help  
 252. `java -jar jenkins-cli.jar -s http://localhost:8080/ list-jobs` – List all jobs  
@@ -319,7 +319,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 275. `java -jar jenkins-cli.jar -s http://localhost:8080/ create-view view_name < config.xml` – Create a new view  
 ```
 
-## Ansible Commands
+## 🤖 Ansible Commands
 ```bash
 276. `ansible --version` – Check Ansible version  
 277. `ansible all -m ping` – Ping all hosts in the inventory  
@@ -348,7 +348,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 300. `ansible-galaxy init myrole` – Create a new Ansible role  
 ```
 
-## AWS CLI Commands
+## ☁️ AWS CLI Commands
 ```bash
 301. `aws configure` – Configure AWS CLI credentials  
 302. `aws s3 ls` – List S3 buckets  
@@ -402,7 +402,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 350. `aws cloudfront list-distributions` – List CloudFront distributions  
 ```
 
-## Helm Commands
+## ⛵ Helm Commands
 ```bash
 351. `helm version` – Check Helm version  
 352. `helm repo add stable https://charts.helm.sh/stable` – Add Helm repository  
@@ -431,7 +431,7 @@ A curated DevOps command reference covering Linux, Git, Docker, Kubernetes, Terr
 375. `helm upgrade --install myapp stable/nginx` – Install or upgrade release  
 ```
 
-## Prometheus Commands
+## 📊 Prometheus Commands
 ```bash
 376. `prometheus --version`                       – Check Prometheus version  
 377. `promtool check config prometheus.yml`       – Validate Prometheus configuration  
